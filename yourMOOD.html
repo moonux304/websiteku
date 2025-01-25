@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Yourkit</title>
+        <meta name="description" content="website kesukaanmu">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: #e2d4e0;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .container{
+                background: #fff6f3;
+                padding: 2-px;
+                border-radius: 10px;
+                box-shadow: 0px 15px rgba(0, 0, 0, 0.1);
+                max-width: 500px;
+                margin: auto;
+            }
+
+            h1{
+                color: #333;
+            }
+
+            form{
+                text-align: left;
+                margin-top: 20px;
+            }
+
+            label{
+                display: block;
+                margin: 10px 0 5px;
+                font-weight: bold;
+            }
+
+            select, input, textarea, button{
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            button:hover{
+                background-color: #F3C3B2;
+            }
+
+            #result{
+                margin-top: 20px;
+                font-size: 18px;
+                color: #555;
+            }
+
+            .pink{
+                color: white;
+                background: #b55163;
+                padding: 5px;
+                font-size: 25px;
+            }
+
+            header{
+                background:#fff6f3;
+                color: white;
+                height: 100px;
+                padding: 50px;
+            }
+
+            body{
+                font-family: arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #fff6f3;
+            }
+
+            .kotak {
+                width: 400px;
+                height: 140px;
+                background-color: #eccabf;
+                border-radius: 10px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #b55163;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            img{
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+
+            @media(max-width: 768px){
+                .container{
+                    max-width: 90%;
+                    padding: 10px;
+                }
+
+                .kotak{
+                    font-size: 18px;
+                }
+            }
+            @media(max-width: 480px){
+                body{
+                    font-size: 14px;
+                    padding: 5%;
+                }
+
+                .kotak{
+                    font-size: 16px;
+                }
+
+                select, input, textarea, button{
+                    font-size: 14px;
+                    padding: 8px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header id="header">
+                <h1 class="kotak">Selamat datang di Website saya!</h1>
+            </header>
+            <h1><b class="pink">Gimana harimu? </b></h1>
+
+            <form id="quiz-form">
+                <label for="mood">1. Mood kamu hari ini gimana?</label>
+                <select id="mood">
+                    <option value="positive">😁 Lagi happy banget!</option>
+                    <option value="neutral">🙂 Biasa aja, nothing special.</option>
+                    <option value="negative">😔 Lagi gak mood banget.</option>
+                </select>
+
+                <label for="productivity">2. Hari ini lebih terasa kayak...</label>
+                <select id="productivity">
+                    <option value="positive">🌈 Hari yang penuh warna</option>
+                    <option value="negative">⛈️ Hari yang berat dan penuh drama</option>
+                    <option value="neutral">☁️ Hari yang biasa aja, flat banget</option>
+                </select>
+
+                <label for="senyum">3. Kalau diukur dari 1-10, produktivitasmu hari ini kira-kira berapa?</label>
+                <input type="number" id="senyum" min="1" max="10">
+
+                <label for="suka">4. Ada hal kecil yang bikin kamu senyum hari ini?</label>
+                <select id="suka">
+                    <option value="positive">💡 Ada banget, dan aku bersyukur!</option>
+                    <option value="negative">🤔 Hmm... ada, tapi gak terlalu besar</option>
+                    <option value="neutral">😶 Kayaknya gak ada sih</option>
+                </select>
+
+                <label for="keadaan">5. Kalau kamu ngerasa lagi gak oke, apa yang lebih menggambarkan keadaanmu?</label>
+                <select id="keadaan">
+                    <option value="positive">💤 Cuma butuh istirahat lebih kayaknya!</option>
+                    <option value="negative">😩 Capek banget sama semuanya</option>
+                    <option value="negative">🤷‍♀️ Gak tahu kenapa, tapi rasanya sedih aja.</option>
+                </select>
+
+                <label for="syukuri">6. Apa yang paling kamu syukuri hari ini?</label>
+                <select id="syukuri">
+                    <option value="positive">👪 Keluarga dan orang-orang terdekat</option>
+                    <option value="positive">🌟 Hal kecil yang bikin aku senyum</option>
+                    <option value="positive">✨ Gak tahu pasti, tapi aku bersyukur aja</option>
+                </select>
+
+                <label for="hal">7. Kalau kamu lagi sedih, apa yang lebih sering </label>
+                <select id="hal">
+                    <option value="positive">🎶 Dengerin lagu</option>
+                    <option value="positive">📖 Baca atau nonton sesuatu yang bikin rileks</option>
+                    <option value="neutral">🤗 Curhat ke temen atau keluarga</option>
+                    <option vlaue="neutral">🙃 Diam aja, gak ngapa-ngapain.</option>
+                </select>
+
+                <label for="bahagia">8. Paling sering yang bikin kamu bahagia itu apa sih?</label>
+                <select id="bahagia">
+                    <option value="positive">👫 Ngobrol atau ketemu orang yang aku sayang</option>
+                    <option value="positive">✨ Hal-hal kecil, kayak makan makanan enak</option>
+                    <option value="positive">🎉 Pencapaian kecil yang bikin aku bangga sama diri sendiri</option>
+                </select>
+
+                <button type="submit">lihat hasil</button>
+            </form>
+
+            <div id="result"></div>
+        </div>
+
+        <script>
+            const form = document.getElementById('quiz-form');
+            const resultDiv = document.getElementById('result');
+
+            form.addEventListener('submit', (e)=> {
+                e.preventDefault();
+
+                const mood = document.getElementById('mood').value;
+                const productivity = document.getElementById('productivity').value;
+                const senyum = parseInt(document.getElementById('senyum').value, 10);
+                const suka = document.getElementById('suka').value;
+                const keadaan = document.getElementById('keadaan').value;
+                const syukuri = document.getElementById('syukuri').value;
+                const hal = document.getElementById('hal').value;
+                const bahagia = document.getElementById('bahagia').value;
+
+                if (isNaN(senyum) || senyum < 1 || senyum > 10){
+                    resultDiv.innerHTML = `<p style="color: red;">Masukkan angka senyum yang valid (1-10)</p>`;
+                    return;
+                }
+
+
+                let result = '';
+                
+                if (mood === 'positive' && senyum >= 7){
+                    result = `<p>Wow! sayang auramu cerah banget hari ini, udah kayak matahari pagi yang bikin semangat semua orang! 
+                    🌞 Nikmatin momen ini, ya. Kamu pantes banget buat bahagia. Jangan lupa bagiin vibes positifmu 
+                    ke sekitar—siapa tahu kebahagiaanmu nular ke orang lain. Keep shining, kamu keren banget! ✨🎉</p>
+                    <li><a href="https://open.spotify.com/track/29OFcHc0kWNGMYgs6OWZuN?si=2a69966bd4c04839" target="_blank">"and it sounds like(ice cream)" - Forrest Nolan</a></li>
+                    <img src="images/meme.jpg" alt="Meme Lucu" width="300" />
+                    <img src="images/monyetlucu.jpg" alt="meme lucu" width="300" />
+                    <img src="images/bunga.jpg" alt="meme lucu" width="300" />
+                    `;
+                } else if (mood === 'negative'){
+                    result = `
+                    <p>Hey, siapa pun kamu aku tahu rasanya pasti gak selalu mudah, tapi gak apa-apa kok buat ngerasa sedih. 
+                    Kadang, hari-hari yang berat justru bantu kita buat lebih menghargai hal-hal kecil yang indah
+                    Kamu udah hebat banget karena masih bertahan sampai sekarang. Pelan-pelan aja, ya.
+                    Istirahat kalau capek, tapi jangan menyerah. Aku yakin, ada hal baik yang nunggu kamu di depan sana. 💛</p>
+                    <li><a href="https://open.spotify.com/track/2FC9a3mg2r0DRYLCHdJg4T?si=4c734f40d6d44d72" target="_blank">"Hari Baru" - RAN</a></li>
+                    <img src="images/semangat.jpg" alt="meme for you" width="300" />
+                    <img src="images/balon.jpg" alt="mema for you" width="300" />
+                    `;
+                } else {
+                    result = `
+                    <p>Hidup datar nggak apa-apa, kok. Kadang, yang bikin seru itu justru langkah kecil buat keluar 
+                    dari zona nyaman. Pelan-pelan aja, kamu pasti nemu warnanya✨</p>
+                    <img src="images/hebat.jpg" alt="meme for you" width="300" />
+                    `;
+                }
+
+                resultDiv.innerHTML = result;
+            });
+        </script>
+    </body>
+</html>
